@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<mat-card class="example-card">
+  <ng-container *ngFor="let p of products; index as i">
+    <img mat-card-image src="{{ p.image }}" alt="" />
+    <h3>
+      <b>
+        {{ p.name }} <br />
+        BDT {{ p.price }}
+      </b>
+    </h3>
+    <p>
+      {{ p.description }}
+    </p>
+
+    <button mat-button style="color: crimson">Add To Cart</button>
+    <button mat-button style="color: crimson">Details</button>
+  </ng-container>
+</mat-card>

@@ -11,8 +11,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {MaterialManagementModule} from './material-management/material-management.module';
+import { ProductListService } from './product-list.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule
+    MaterialManagementModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
