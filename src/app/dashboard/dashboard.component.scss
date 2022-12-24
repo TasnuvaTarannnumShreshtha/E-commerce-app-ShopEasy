@@ -1,33 +1,30 @@
 .example-card {
   max-width: 300px;
+  padding: 40px;
+
+}
+parent {
+  width: 100%;
+  /* OR like 95% to make shadows visible */
+  height: 100%;
+  /* OR like 95% to make shadows visible */
 }
 .mdc-card {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 100px;
+    // width: 300px;
+    // height: 100px;
     box-sizing: border-box;
+    width: inherit;
+    height: inherit;
 }
 .mat-mdc-card {
-    box-shadow: 0px 2px 1px -1px rgba(247, 189, 189, 0.788), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-    --mdc-elevated-card-container-color: #efb8b8;
+    box-shadow: none;
+    --mdc-elevated-card-container-color: #fefefe;
 }
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+.img{
+  padding:40px;
 }
-.mdc-card::after {
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    height: 50%;
-    top: 0;
-    left: 0;
-    border: 1px solid rgba(0,0,0,0);
-    border-radius: inherit;
-    content: "";
-    pointer-events: none;
-    pointer-events: none;
-}
+
 
