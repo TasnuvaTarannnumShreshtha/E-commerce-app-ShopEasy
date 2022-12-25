@@ -1,5 +1,40 @@
-<p>product-list works!</p>
+<!-- <h1>Will contain the data table and a button to add new products.</h1>
 
-<h1>Will contain the data table and a button to add new products.</h1>
+<h1>each row will contain an Edit and a Delete button</h1> -->
 
-<h1>each row will contain an Edit and a Delete button</h1>
+<mat-table [dataSource]="productList.products" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="productName">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.productName }} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.price }} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="quantity">
+    <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.quantity }} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="category">
+    <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.category }} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="productShortCode">
+    <mat-header-cell *matHeaderCellDef> Code </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.productShortCode }}
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+</mat-table>

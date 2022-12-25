@@ -1,0 +1,9 @@
+[
+  {"name": "Ramen", "price":20, "quantity":14, "code":"ramBD", "description":"Ramen Noodles yum yum Ramen Noodles yum yum Ramen Noodles yum yum Ramen Noodles yum yum Ramen Noodles yum yum ", "image":"https://m.media-amazon.com/images/I/71vY65MHylL._SX522_.jpg"},
+  {"name": "Detol handwash", "price":45, "quantity":8, "code":"DHBD", "description":"Keep them germs away Keep them germs away Keep them germs away Keep them germs awayKeep them germs away Keep them germs away", "image":"https://image3.mouthshut.com/images/imagesp/925642070s.jpg"},
+  {"name": "Starship Chocolate milk", "price":25, "quantity":80, "code":"CMBD", "description":"Order grocery and food online with same-day home delivery. Save money, save time", "image":"https://cdn.fansshare.com/images/chocolatemilk/chocolate-milk-1348848310.jpg"},
+  {"name": "Starship Chocolate milk", "price":25, "quantity":80, "code":"CMBD", "description":"Order grocery and food online with same-day home delivery. Save money, save time", "image":"https://cdn.fansshare.com/images/chocolatemilk/chocolate-milk-1348848310.jpg"},
+  {"name": "Detol handwash", "price":45, "quantity":8, "code":"DHBD", "description":"Keep them germs away Keep them germs away Keep them germs away Keep them germs awayKeep them germs away Keep them germs away", "image":"https://image3.mouthshut.com/images/imagesp/925642070s.jpg"},
+   {"name": "Detol handwash", "price":45, "quantity":8, "code":"DHBD", "description":"Keep them germs away Keep them germs away Keep them germs away Keep them germs awayKeep them germs away Keep them germs away", "image":"https://image3.mouthshut.com/images/imagesp/925642070s.jpg"},
+    {"name": "Detol handwash", "price":45, "quantity":8, "code":"DHBD", "description":"Keep them germs away Keep them germs away Keep them germs away Keep them germs awayKeep them germs away Keep them germs away", "image":"https://image3.mouthshut.com/images/imagesp/925642070s.jpg"}
+]
