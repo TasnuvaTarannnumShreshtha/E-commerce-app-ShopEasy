@@ -9,9 +9,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 // import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import {MatRippleModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
-const materialList = [MatButtonModule, MatToolbarModule, MatCardModule, MatGridListModule, MatIconModule, MatTableModule]
+const materialList = [MatButtonModule, MatNativeDateModule ,MatDatepickerModule,MatFormFieldModule, MatInputModule, MatSelectModule, MatRippleModule, MatToolbarModule, MatCardModule, MatGridListModule, MatIconModule, MatTableModule]
 
 @NgModule({
 

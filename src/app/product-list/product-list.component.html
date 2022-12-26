@@ -1,6 +1,9 @@
 <!-- <h1>Will contain the data table and a button to add new products.</h1>
 
 <h1>each row will contain an Edit and a Delete button</h1> -->
+<button class="button-left" mat-button color="warn" routerLink="/add-product">
+  Add New Products
+</button>
 
 <mat-table [dataSource]="productList.products" class="mat-elevation-z8">
   <!-- Position Column -->
@@ -12,7 +15,7 @@
   <!-- Name Column -->
   <ng-container matColumnDef="price">
     <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.price }} </mat-cell>
+    <mat-cell *matCellDef="let element">BDT {{ element.price }} </mat-cell>
   </ng-container>
 
   <!-- Name Column -->

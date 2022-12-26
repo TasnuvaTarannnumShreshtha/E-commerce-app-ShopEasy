@@ -1,23 +1,25 @@
 <mat-grid-list cols="5" rowHeight="450px">
   <mat-grid-tile *ngFor="let p of productList.products">
-    <mat-card class="example-card">
-      <img class="img" mat-card-image src="..." alt="{{ p.name }}" />
-      <mat-card-content>
-        <h3>
-          <b>
-            {{ p.productName }} <br />
-            BDT {{ p.price }}
-          </b>
-        </h3>
-        <!-- <div class="desc">
+    <ng-container *ngFor="let image of imageList">
+      <mat-card class="example-card">
+        <img class="img" mat-card-image [src]="image" alt="{{ p.name }}" />
+        <mat-card-content>
+          <h3>
+            <b>
+              {{ p.productName }} <br />
+              BDT {{ p.price }}
+            </b>
+          </h3>
+          <!-- <div class="desc">
           <p>
             {{ p.description }}
           </p>
         </div> -->
-      </mat-card-content>
+        </mat-card-content>
 
-      <button mat-stroked-button color="warn">Add To Cart</button>
-      <button mat-stroked-button color="warn">Details</button>
-    </mat-card>
+        <button mat-stroked-button color="warn">Add To Cart</button>
+        <button mat-stroked-button color="warn">Details</button>
+      </mat-card>
+    </ng-container>
   </mat-grid-tile>
 </mat-grid-list>

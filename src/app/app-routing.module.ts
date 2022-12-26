@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'productDetails', component:ProductDetailsComponent},
   {path: 'productList', component:ProductListComponent},
   {path:'dashboard', component:DashboardComponent},
+  {path:'add-product', component:AddProductComponent},
   {path:"**", component:PageNotFoundComponent}
 ];
 
