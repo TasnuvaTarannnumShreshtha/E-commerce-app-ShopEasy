@@ -1,7 +1,8 @@
 <!-- <h1>Will contain the data table and a button to add new products.</h1>
 
 <h1>each row will contain an Edit and a Delete button</h1> -->
-<button class="button-left" mat-button color="warn" routerLink="/add-product">
+/
+<button mat-raised-button color="primary" routerLink="/add-product">
   Add New Products
 </button>
 
@@ -35,6 +36,18 @@
     <mat-header-cell *matHeaderCellDef> Code </mat-header-cell>
     <mat-cell *matCellDef="let element">
       {{ element.productShortCode }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="buttons">
+    <mat-header-cell *matHeaderCellDef> Options</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button (click)="onEdit(element)" mat-raised-button color="warn">
+        Edit
+      </button>
+      <button (click)="onDelete(element)" mat-raised-button color="warn">
+        Delete
+      </button>
     </mat-cell>
   </ng-container>
 

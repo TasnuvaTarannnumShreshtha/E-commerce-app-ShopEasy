@@ -4,6 +4,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditProductsComponent } from './edit-products/edit-products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'productList', component:ProductListComponent},
   {path:'dashboard', component:DashboardComponent},
   {path:'add-product', component:AddProductComponent},
+    {path:'edit-product', component:EditProductsComponent},
   {path:"**", component:PageNotFoundComponent}
 ];
 

@@ -1,0 +1,79 @@
+<p>edit-products works!</p>
+
+<form [formGroup]="products" class="form" (ngSubmit)="onEdit()">
+  <div class="example-container">
+    <mat-form-field appearance="fill" color="accent">
+      <mat-label>Enter Product Name</mat-label>
+      <input formControlName="productName" matInput />
+
+      <mat-hint align="end">Maximum characters 250</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Price in BDT</mat-label>
+      <input formControlName="price" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Quantity</mat-label>
+      <input formControlName="quantity" matInput name="quantity" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Category</mat-label>
+      <mat-select formControlName="category" name="category">
+        <mat-option value="Food">Food</mat-option>
+        <mat-option value="Electronics/Gadgets">Electronics/Gadgets</mat-option>
+        <mat-option value="Beauty">Beauty</mat-option>
+        <mat-option value="Health">Health</mat-option>
+        <mat-option value="Clothing">Clothing</mat-option>
+        <mat-option value="Medicine">Medicine</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Origin</mat-label>
+      <mat-select formControlName="origin" name="origin">
+        <mat-option value="Bangladesh">BD</mat-option>
+        <mat-option value="United Kingdom">UK</mat-option>
+        <mat-option value="United States">USA</mat-option>
+        <mat-option value="China">CN</mat-option>
+        <mat-option value="Malaysia">MY</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Code</mat-label>
+      <input formControlName="productShortCode" matInput name="code" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input formControlName="createdDate" matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Desciption</mat-label>
+      <input formControlName="description" matInput name="decription" />
+    </mat-form-field>
+  </div>
+
+  <div class="btn">
+    <button
+      type="submit"
+      [disabled]="!products.valid"
+      mat-raised-button
+      color="warn"
+    >
+      <a style="text-decoration: none; color: black" routerLink="/productList"
+        >Edit</a
+      >
+    </button>
+  </div>
+</form>

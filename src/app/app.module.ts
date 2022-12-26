@@ -16,11 +16,13 @@ import {MaterialManagementModule} from './material-management/material-managemen
 import { ProductListService } from './product-list.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditProductsComponent } from './edit-products/edit-products.component';
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
+    EditProductsComponent,
   ],
   imports: [
     BrowserModule,

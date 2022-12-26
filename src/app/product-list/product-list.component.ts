@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { ProductListService } from '../product-list.service';
 import { HttpClient } from '@angular/common/http';
+// import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import {CreateProductService} from "../create-product.service";
 
 @Component({
   selector: 'app-product-list',
@@ -11,9 +14,9 @@ import { HttpClient } from '@angular/common/http';
 export class ProductListComponent implements OnInit{
 
    productList: any = [];
-   columnsToDisplay = ['productName', 'price', 'quantity', 'category', 'productShortCode'];
+   columnsToDisplay = ['productName', 'price', 'quantity', 'category', 'productShortCode', 'buttons'];
 
-  constructor(public http:HttpClient){}
+  constructor(public http:HttpClient, private router:Router, private prod: CreateProductService){}
 
   ngOnInit(): void{
     this.http.get('http://localhost:4001/getProductInfo').subscribe((data) =>{
@@ -24,9 +27,21 @@ export class ProductListComponent implements OnInit{
 
     // displayedColumns = ['name', 'price', 'quantity', 'code'];
     // dataSource = this.productList.products;
+  }
 
 
-}
+  public onEdit(element: object){
+    this.router.navigateByUrl('/edit-product', {state: element});
+  }
+
+    public onDelete(element: any){
+      console.log(element);
+    this.prod.deleteProduct(element._id).subscribe((data:any)=>{
+    });
+    window.location.reload();
+  }
+
+
 }
 
 

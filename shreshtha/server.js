@@ -51,6 +51,46 @@ app.post("/createProduct", async (req, res) => {
   }
 });
 
+app.post("/editProduct", async (req, res) => {
+  let productData = req.body;
+  let { _id, ...data } = productData;
+  console.log(data, _id);
+  let product = {};
+  try {
+    product = await ProductList.findByIdAndUpdate(
+      _id,
+      { ...data },
+      { new: true },
+      (err, docs) => {
+        if (err) {
+          console.log("Err ", err);
+        } else {
+          console.log("Docs");
+        }
+      }
+    );
+  } catch (err) {
+    console.log("Edit not working");
+  }
+  res.status(201).json({
+    message: "Ok",
+    ...product,
+  });
+});
+
+app.delete("/deleteProduct/:id", async (req, res) => {
+  let id = req.params.id;
+  console.log(id);
+  try {
+    await ProductList.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+  }
+  res.status(200).json({
+    message: "OKaays",
+  });
+});
+
 app.listen(PORT, () => {
   console.log("server started");
   connectDb();
