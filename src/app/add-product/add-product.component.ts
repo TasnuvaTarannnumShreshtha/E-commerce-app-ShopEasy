@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {CreateProductService} from "../create-product.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +12,7 @@ import {CreateProductService} from "../create-product.service";
 })
 export class AddProductComponent implements OnInit{
   products:any;
-  constructor(private fb: FormBuilder, private prod: CreateProductService){
+  constructor(private fb: FormBuilder, private prod: CreateProductService, private router:Router){
     this.products = fb.group(
       {
         productName: new FormControl('', Validators.required),
@@ -31,9 +32,12 @@ export class AddProductComponent implements OnInit{
   }
 
   onSubmit(){
+    console.log(this.products.value);
     this.prod.createProduct(this.products.value).subscribe((data:any)=>{
       console.log(data);
     });
+
+    this.router.navigate(['/productList']);
   }
 }
 

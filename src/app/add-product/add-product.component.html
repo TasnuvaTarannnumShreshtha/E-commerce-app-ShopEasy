@@ -1,62 +1,4 @@
 <h1>Add New Products</h1>
-<!--
-<div class="form">
-  <form>
-    <div class="sections">
-      <label>Product Name</label>
-      <input type="text" placeholder="Product Name" formControlName="name" />
-    </div>
-    <div class="sections">
-      <label>Price</label>
-      <input type="text" placeholder="in BDT" formControlName="price" />
-    </div>
-    <div class="sections">
-      <label>Quantity</label>
-      <input type="text" placeholder="available" formControlName="quantity" />
-    </div>
-    <div class="sections">
-      <label>Product Name</label>
-      <input
-        type="text"
-        placeholder="Product Name"
-        formControlName="category"
-      />
-    </div>
-    <div class="sections">
-      <label>Product Name</label>
-      <input type="text" placeholder="Product Name" formControlName="origin" />
-    </div>
-    <div class="sections">
-      <label>Product Name</label>
-      <input type="text" placeholder="Product Name" formControlName="code" />
-    </div>
-    <div class="sections">
-      <label>Creation date</label>
-      <mat-form-field appearance="fill">
-        <mat-label>Choose a date</mat-label>
-        <input formControlName="date" [matDatepicker]="picker" />
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle
-          matIconSuffix
-          [for]="picker"
-        ></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </div>
-
-    <div class="sections">
-      <label>Product Name</label>
-      <input
-        type="text"
-        placeholder="Product Name"
-        formControlName="description"
-      />
-    </div>
-  </form>
-</div> -->
-
-<!-- #productsForm="ngForm"
-  (ngSubmit)="onProductCreate(productsForm.value)" -->
 
 <form [formGroup]="products" class="form" (ngSubmit)="onSubmit()">
   <div class="example-container">
@@ -86,6 +28,7 @@
         <mat-option value="Health">Health</mat-option>
         <mat-option value="Clothing">Clothing</mat-option>
         <mat-option value="Medicine">Medicine</mat-option>
+        <mat-option value="Home Decor">Home Decor</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -129,9 +72,7 @@
       mat-raised-button
       color="warn"
     >
-      <a style="text-decoration: none; color: black" routerLink="/productList"
-        >Create</a
-      >
+      <a style="text-decoration: none; color: black">Create</a>
     </button>
   </div>
 </form>
